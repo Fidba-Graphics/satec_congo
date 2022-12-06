@@ -1,0 +1,70 @@
+@import './variable';
+@import './mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // user-select: none;
+}
+
+html {
+  // font-size: 62.5%;
+  font-size: 64.5%; // 10px
+}
+
+body {
+  width: 100%;
+  color: $text-color;
+  font-family: $xs-family;
+  font-size: 1.2rem;
+  // background-color: rgb(28, 124, 24);
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    // background: $;
+  }
+
+  @include media(500px) {
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+  }
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul,
+li {
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+//   -webkit-text-fill-color: $secondary-text-color;
+//   -webkit-box-shadow: 0 0 0px 1000px $black-ground-color inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
