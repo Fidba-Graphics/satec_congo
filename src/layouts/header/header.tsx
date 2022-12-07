@@ -36,8 +36,10 @@ export const Header: React.FC<Props> = ({ children, isVisible }) => {
     }
   ]
 
-  const [burgerClicked, setBurgerClicked] = useState(false);
+  const [burgerClicked, setBurgerClicked] = useState<boolean>(false);
   // const [showNavBar, setShowNavBar] = React.useState<string>('hidden');
+  const [colorChange, setColorchange] = useState<boolean>(false);
+
 
   const handleBurgerClick = () => {
     setBurgerClicked(!burgerClicked)
@@ -45,12 +47,22 @@ export const Header: React.FC<Props> = ({ children, isVisible }) => {
     console.log('New showSideBar:', burgerClicked);
   }
 
+  const changeNavbarColor = () =>{
+     if(window.scrollY >= 80){
+       setColorchange(true);
+     }
+     else{
+       setColorchange(false);
+     }
+  };
+  window.addEventListener('scroll', changeNavbarColor);
+
   return (
     <header className="header_container">
       <> 
         {isVisible && {children}}
       </>
-      <motion.div className="header-scrolled d-flex flex-center">
+      <motion.div className={`header-scrolled  ${colorChange && 'colorChange'} d-flex flex-center`}>
         <motion.div className="logo">
           <a href="#home-section">
             <img src={logo} alt="logo" />

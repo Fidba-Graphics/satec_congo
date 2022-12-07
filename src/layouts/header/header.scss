@@ -4,7 +4,6 @@
 .header_container {
   max-width: 100%;
   // background-color: rgb(238, 171, 171);
-  // height: 180px;
 }
 
 .header-scrolled {
@@ -17,7 +16,6 @@
   right: 0;
   padding: 0 1rem;
   transition: all 0.5s;
-  // background-color: rgba(4,9,30,0.9);
 
   &::after {
     content: '';
@@ -28,8 +26,15 @@
     left: 0;
     right: 0;
     bottom: 0;
-    // z-index: 1;
     border-bottom: 1px solid #39353e;
+  }
+
+  &.colorChange {
+    background-color: rgba(4,9,30,0.9);
+
+    &::after {
+      display: none;
+    }
   }
 
   .logo {
@@ -56,7 +61,6 @@
   }
   
   .nav_menu {
-    // height: 100%;
     position: fixed;
     top: 100px;
     bottom: 0;
@@ -78,7 +82,6 @@
       overflow: hidden;
       margin: 0.5rem 1rem;
       position: relative;
-      // width: 100%;
       font-weight: 400;
       // background-color: red;
       
@@ -108,7 +111,6 @@
 @include media(768px) {
   .header-scrolled {
     padding: 0 5%;
-    // background-color: red;
 
     &::after {
       width: 95%;

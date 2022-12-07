@@ -1,42 +1,13 @@
 @import './variable';
 
-%navbar-li {
-  cursor: pointer;
-  // padding: 10px;
-  // font: 1.2rem;
-  // font-weight: 900;
-  color: var(--white);
-
-  &:hover {
-    color: var(--orange);
-  }
-}
 
 %active-menu {
-  color: var(--orange);
+  color: $secondary-color;
 }
 
 %active-page {
-  background-color: var(--orange);
+  background-color: $secondary-color;
 }
-
-
-
-
-// %boder-properties {
-//   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
-//   // border: var(--border-size);
-//   border-radius: 4px;
-// }
-
-// %btn-properties {
-//   font-size: 1.2rem;
-//   font-weight: bold;
-//   padding: 6px 15px;
-//   border-radius: 32px;
-//   // background-color: var(--primary);
-//   // color: var(--white);
-// }
 
 // %btn-properties {
 //   border-radius: 34px;
@@ -55,28 +26,7 @@
 //   }
 // }
 
-// svg,
-// img {
-//   transition: all 0.4s ease-in-out;
 
-//   &:hover {
-//     transform: scale(1.01);
-//     box-shadow: $box-shadow;
-//     opacity: 0.8;
-//   }
-// }
-
-// button {
-//   border: none;
-//   outline: none;
-//   background-color: transparent;
-//   transition: all 0.5s ease;
-
-//   &:hover {
-//     cursor: pointer;
-//     transform: scale(1.01);
-//   }
-// }
 
 // %h2-properties {
 //   font-size: 18px;
