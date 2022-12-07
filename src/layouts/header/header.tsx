@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion } from 'framer-motion';
 import { MenuItem } from '../../modal/index';
 import { IconContext } from "react-icons";
 import { FiMenu } from "react-icons/fi";
 import { CgClose } from 'react-icons/cg';
 import { FaAngleDoubleRight, FaArrowRight } from 'react-icons/fa';
-
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo-removebg.png";
 // import styles from './header.module.scss';
 import './header.scss';
 
@@ -37,20 +36,14 @@ export const Header: React.FC<Props> = ({ children, isVisible }) => {
     }
   ]
 
-  // const [burger_class, setBurgerClass] = useState<string>("burger-bar unclicked");
-  const [burgerClicked, setBurgerClicked] = React.useState(false);
+  const [burgerClicked, setBurgerClicked] = useState(false);
   // const [showNavBar, setShowNavBar] = React.useState<string>('hidden');
 
-      // to change burger classes
-      const handleBurgerClick = () => {
-        setBurgerClicked(!burgerClicked)
-        // burgerClicked ? setShowNavBar('show') : setShowNavBar('hidden');
-        console.log('New showSideBar:', burgerClicked);
-      }
-
-
-      
-
+  const handleBurgerClick = () => {
+    setBurgerClicked(!burgerClicked)
+    // burgerClicked ? setShowNavBar('show') : setShowNavBar('hidden');
+    console.log('New showSideBar:', burgerClicked);
+  }
 
   return (
     <header className="header_container">
@@ -59,10 +52,9 @@ export const Header: React.FC<Props> = ({ children, isVisible }) => {
       </>
       <motion.div className="header-scrolled d-flex flex-center">
         <motion.div className="logo">
-            <a href="#home-section">
-              MAGNUSBEN
-              {/* <img src={logo} alt="logo" /> */}
-            </a>
+          <a href="#home-section">
+            <img src={logo} alt="logo" />
+          </a>
         </motion.div>
 
         <motion.nav className="navbar d-flex flex-center">
@@ -79,7 +71,6 @@ export const Header: React.FC<Props> = ({ children, isVisible }) => {
               </IconContext.Provider>
             </motion.button>
           </motion.div>
-          {/* <nav className={`active ${show && 'hidden'}`}> */}
 
           {/* <ul className={`${styles.nav_menu} ${showNavBar ? styles.show : styles.hidden}`}> */}
           <motion.ul className={`nav_menu ${burgerClicked && 'show'} d-flex flex-column`}>
@@ -96,8 +87,5 @@ export const Header: React.FC<Props> = ({ children, isVisible }) => {
         </motion.nav> 
       </motion.div>
     </header>
-
   );
 };
-
-// export default Header;
