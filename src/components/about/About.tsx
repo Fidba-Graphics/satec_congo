@@ -4,25 +4,21 @@ import { motion } from "framer-motion"
 import image1 from '../../assets/images/admin.jpeg';
 import image2 from '../../assets/images/about.jpg';
 
-import { IconContext } from "react-icons";
-import { GiMechanicGarage } from "react-icons/gi";
-import { RiComputerLine, RiLightbulbFlashLine } from "react-icons/ri";
-import { GiTreeBranch } from "react-icons/gi";
 // const Fade = require("react-reveal/Fade");
 import styles from './about.module.scss';
 
 export const About: React.FC<{}> = () => {
   return (
     <motion.section className={styles.about_section} id="about-section">
-      <motion.div className={styles.articles_container}>
+      <motion.div className={styles.articles_wrapper}>
 
-        <article className={styles.article}>
-          <div className={styles.article_content}>
+        <motion.article className={styles.article}>
+          <motion.div className={styles.article_content}>
             {/* <Fade bottom> */}
               <h2 className={styles.article_title}>A propos de nous</h2>
             {/* </Fade> */}
             {/* <Fade bottom> */}
-              <p className={styles.article_text}>
+              <motion.p className={styles.article_text}>
                 La grandeur et la force d’un homme réside dans les idées,
                 forces qui orientent un peuple dans un espace donné.
                 Convaincus de l’impérieuse et absolue nécessité de faire de
@@ -35,25 +31,25 @@ export const About: React.FC<{}> = () => {
                 technique pour la Sécurité, la qualité et la garantie des
                 services afin d’offrir au peuple congolais l’occasion
                 d’engager la R D Congo sur l’orbite de l’émergence.
-              </p>
+              </motion.p>
             {/* </Fade> */}
-          </div>
+          </motion.div>
           {/* <Fade bottom> */}
-            <div className={styles.article_img}>
+            <motion.div className={styles.article_img}>
               <img src={image1} alt="about-img1" />
-            </div>
+            </motion.div>
           {/* </Fade> */}
-        </article>
+        </motion.article>
 
-        <article className={styles.article}>
-          <div className={styles.article_content}>
+        <motion.article className={styles.article}>
+          <motion.div className={styles.article_content}>
             {/* <Fade bottom> */}
               <h2 className={styles.article_title}>
                 Domaines d’action ou d’intervention{" "}
               </h2>
             {/* </Fade> */}
             {/* <Fade bottom> */}
-              <p className={styles.article_text}>
+              <motion.p className={styles.article_text}>
                 SATEC CONGO Sarl est une société qui offre des services, un
                 support logistique (fourniture et vente des incubateurs
                 automatiques des œufs de qualité fabriqués en RDC, vente et
@@ -62,18 +58,16 @@ export const About: React.FC<{}> = () => {
                 informatique appliquee, plomberie et construction.) ainsi que
                 des formations professionnelles dans les domaines techniques
                 notamment :
-              </p>
+              </motion.p>
             {/* </Fade> */}
-          </div>
+          </motion.div>
           {/* <Fade bottom> */}
-            <div className={styles.article_img}>
+            <motion.div className={styles.article_img}>
               <img src={image2} alt="about-img2" />
-            </div>
+            </motion.div>
             {/* </Fade> */}
-        </article>
+        </motion.article>
       </motion.div>
-
-
   </motion.section>
   );
 }
