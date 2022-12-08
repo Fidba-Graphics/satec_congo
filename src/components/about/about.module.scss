@@ -157,3 +157,11 @@
   }
 }
 
+
+@include media(992px) {
+  .article {
+    .article_img {
+      height: 35vh;
+    }
+  }
+}
