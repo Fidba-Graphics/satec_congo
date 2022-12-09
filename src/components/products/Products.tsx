@@ -156,7 +156,46 @@ export const Products: React.FC<{}> = () => {
 
   return (
     <motion.section className={styles.products_section} id="products-section">
- 
+      <motion.div className={styles.products_section_one}>
+        <motion.div className={styles.products_header}>
+          {/* <Fade bottom> */}
+            <h2 className={styles.products_title}>Nos Produits</h2>
+          {/* </Fade> */}
+          {/* <Fade bottom> */}
+            <p className={styles.products_text}>
+              Profitez des meilleures installations électriques
+              industrielles et domestiques, Plomberie et des bons
+              dimensionements des systèmes solaires au standard
+              international avec la meilleure entreprise du moment. <br />
+              SATEC - Congo sarl.
+            </p>
+          {/* </Fade> */}
+        </motion.div>
+
+        <motion.ul className={styles.products_wrapper}>
+          {ProductsElement.map((product: ProductItem) => (  
+          // <Fade bottom>
+            <motion.li key={product.id} className={styles.product_item}>
+              <div className={styles.product_item_img}>
+                <figure>
+                  <img src={product.figure} alt={product.id} className={styles.product_img_fluid}/>
+                </figure>
+              </div>
+              <div className={styles.product_item_content}>
+                <p className={styles.product_capacity}>
+                  Capacité {product.capacity} oeufs
+                </p>
+                <button type="button" className={styles.product_link}>
+                  <a href={product.id} className="btn view-btn ml-1 rounded-0">
+                    Details
+                  </a>
+                </button>
+              </div>
+            </motion.li>
+          // </Fade>
+          ))}
+        </motion.ul>
+      </motion.div>
       
 
     </motion.section>
