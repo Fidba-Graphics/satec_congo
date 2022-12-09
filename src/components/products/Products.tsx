@@ -197,7 +197,48 @@ export const Products: React.FC<{}> = () => {
         </motion.ul>
       </motion.div>
       
+      <motion.div className={styles.products_section_two}>
+        <ul className={styles.products_details}>
+          {ProductsElement.map((product: ProductItem) => (
+          // <Fade left>
+            <motion.li className={styles.product_details} id={product.id}>
+                <motion.div className="col-md-6 mb-5 mb-md-0">
+                  <img src={product.figure} alt={product.id} className={styles.product_img} />
+                </motion.div>
 
+                <div className={styles.product_content}>
+                  <h3 className={styles.product_title}>
+                    A propos du produit
+                  </h3>
+                  <p className="mb-1">Capacite : {product.capacity} Oeufs</p>
+                  <p className="mb-1">Puissance : {product.puissance}W Max</p>
+                  <p className="mb-1">Tension : {product.tension['AC']}V AC/ {product.tension.DC}V DC</p>
+                  <p className="mb-1">Poid : {product.poid}Kg</p>
+                  <p className="mb-1">Guaranty : {product.guaranty} an</p>
+                  <p className="mb-1">Taux d'ecclosion : {product.taux[0]} à {product.taux[1]}%</p>
+                  <div className="mb-4">
+                    <h5>Prix:</h5>
+                    <div  className={styles.product_price}>
+                      <del className="mr-2">${product.price[0]}</del> ${product.price[1]}
+                    </div>
+                  </div>
+                  <p  className={styles.product_text_danger}>
+                    Puissance necessaire en energie solaires qu'il vous faut
+                  </p>
+                  <p className="mb-1">Panneau solaire : {product.power}W</p>
+                  <p className="mb-1">Batterie : {product.battery['voltage']}V / {product.battery['current']}Ah</p>
+
+                  <p>
+                    <a href="#contact" className={styles.product_pay_btn}>
+                      Acheter
+                    </a>
+                  </p>
+                </div>
+            </motion.li>
+          // </Fade>
+          ))}
+        </ul>
+      </motion.div>
     </motion.section>
   );
 }
