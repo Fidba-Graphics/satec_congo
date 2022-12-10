@@ -108,3 +108,59 @@ form {
     transition: all 0.4s ease 0.2s;
   }
 }
+
+@include media(480px) {
+
+}
+
+@include media(768px) {
+  form {
+    width: 80%;
+
+    .input_wrapper {
+      @include d-flex(flex-start, center);
+      column-gap: 1.5rem;
+
+      & > * {
+        flex: 1;
+      }
+    }
+  } 
+}
+
+@include media(992px) {
+  .contacts_wrapper {
+    width: 100%;
+    padding: 3rem;
+    @include d-flex(space-between, flex-start);
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  article {
+    width: 40%;
+    padding: 0 1rem;
+    // text-align: left;
+    // max-width: 540px;
+  
+    p {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      font-weight: 400;
+      margin: 2rem 0;
+    }
+  }
+
+  form {
+    width: 55%;
+    max-width: 780px;
+
+  }  
+}
+
+@include media(1200px) {
+  .contacts_wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
