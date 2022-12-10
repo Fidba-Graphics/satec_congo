@@ -1,9 +1,9 @@
 import { motion } from "framer-motion"
 
-import image1 from '../../assets/images/m.jpeg';
-import image2 from '../../assets/images/m2.jpeg';
-import image3 from '../../assets/images/m3.jpeg';
-import image4 from '../../assets/images/m4.jpeg';
+import image1 from '../../assets/images/team1.jpeg';
+import image2 from '../../assets/images/team2.jpeg';
+import image3 from '../../assets/images/team3.jpeg';
+import image4 from '../../assets/images/team4.jpeg';
 // const Fade = require("react-reveal/Fade");
 
 import styles from './team.module.scss';
