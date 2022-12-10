@@ -16,11 +16,15 @@ type Props = {
 };
 
 
-export const Header: React.FC<Props> = ({ children, isVisible }) => {
+export const Header: React.FC<Props> = ({ children }) => {
   const MenuLinks: MenuItem[] = [
     {
       name: 'A propos',
       linkTo: 'about-section'
+    },
+    {
+      name: 'Our Services',
+      linkTo: 'services-section'
     },
     {
       name: 'Produits',
@@ -48,7 +52,7 @@ export const Header: React.FC<Props> = ({ children, isVisible }) => {
   }
 
   const changeNavbarColor = () =>{
-     if(window.scrollY >= 80){
+     if(window.scrollY >= 100){
        setColorchange(true);
      }
      else{
@@ -60,7 +64,7 @@ export const Header: React.FC<Props> = ({ children, isVisible }) => {
   return (
     <header className="header_container">
       <> 
-        {isVisible && {children}}
+        {children}
       </>
       <motion.div className={`header-scrolled  ${colorChange && 'colorChange'} d-flex flex-center`}>
         <motion.div className="logo">
