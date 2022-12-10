@@ -17,7 +17,7 @@ export const Services: React.FC<{}> = () => {
   return (
     <motion.section className={styles.services_section} id="services-section">
       <motion.div className={styles.services_header}>
-        <motion.p className={styles.services_sub_title}>Nos services</motion.p>
+        <motion.p className={styles.services_sub_title}>Nos Services</motion.p>
         <motion.h2 className={styles.services_title}>Nous offrons des services</motion.h2>
       </motion.div>
       <motion.ul className={styles.services_domain_wrapper}>
