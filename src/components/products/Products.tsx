@@ -8,6 +8,7 @@ import Prod3 from '../../assets/images/satec4.png';
 import Prod4 from '../../assets/images/satec5.png';
 import Prod5 from '../../assets/images/satec3.png';
 import Prod6 from '../../assets/images/satec11.png';
+import {AiFillPlayCircle} from 'react-icons/ai';
 // const Fade = require("react-reveal/Fade");
 import styles from './products.module.scss';
 
@@ -22,9 +23,9 @@ import styles from './products.module.scss';
 export const Products: React.FC<{}> = () => {
   const ProductsElement: ProductItem[] = [
     {
+      id: 'prod1',
       figure: Prod1,
       capacity: 240,
-      id: '#prod1',
       animation: 'bottom',
       puissance: 200,
       tension: {
@@ -44,7 +45,7 @@ export const Products: React.FC<{}> = () => {
     },
 
     {
-      id: '#prod2',
+      id: 'prod2',
       figure: Prod2,
       capacity: 480,
       animation: 'right',
@@ -66,7 +67,7 @@ export const Products: React.FC<{}> = () => {
     },
 
     {
-      id: '#prod3',
+      id: 'prod3',
       figure: Prod3,
       capacity: 600,
       animation: '',
@@ -88,7 +89,7 @@ export const Products: React.FC<{}> = () => {
     },
 
     {
-      id: '#prod4',
+      id: 'prod4',
       figure: Prod4,
       capacity: 840, //900
       animation: 'bottom',
@@ -110,7 +111,7 @@ export const Products: React.FC<{}> = () => {
     },
 
     {
-      id: '#prod5',
+      id: 'prod5',
       figure: Prod5,
       capacity: 5000,
       animation: '',
@@ -132,7 +133,7 @@ export const Products: React.FC<{}> = () => {
     },
 
     {
-      id: '#prod6',
+      id: 'prod6',
       figure: Prod6,
       capacity: 10000,
       animation: 'bottom',
@@ -186,7 +187,7 @@ export const Products: React.FC<{}> = () => {
                   Capacité {product.capacity} oeufs
                 </p>
                 <button type="button" className={styles.product_link}>
-                  <a href={product.id} className="btn view-btn ml-1 rounded-0">
+                  <a href={`#${product.id}`} className="btn view-btn ml-1 rounded-0">
                     Details
                   </a>
                 </button>
@@ -198,42 +199,42 @@ export const Products: React.FC<{}> = () => {
       </motion.div>
       
       <motion.div className={styles.products_section_two}>
-        <ul className={styles.products_details}>
+        <ul className={styles.products_details_wraper}>
           {ProductsElement.map((product: ProductItem) => (
           // <Fade left>
             <motion.li className={styles.product_details} id={product.id}>
-                <motion.div className="col-md-6 mb-5 mb-md-0">
-                  <img src={product.figure} alt={product.id} className={styles.product_img} />
+                <motion.div className={styles.product_img}>
+                  <img src={product.figure} alt={product.id} className={styles.img} />
                 </motion.div>
 
-                <div className={styles.product_content}>
+                <motion.div className={styles.product_content}>
                   <h3 className={styles.product_title}>
                     A propos du produit
                   </h3>
-                  <p className="mb-1">Capacite : {product.capacity} Oeufs</p>
-                  <p className="mb-1">Puissance : {product.puissance}W Max</p>
-                  <p className="mb-1">Tension : {product.tension['AC']}V AC/ {product.tension.DC}V DC</p>
-                  <p className="mb-1">Poid : {product.poid}Kg</p>
-                  <p className="mb-1">Guaranty : {product.guaranty} an</p>
-                  <p className="mb-1">Taux d'ecclosion : {product.taux[0]} à {product.taux[1]}%</p>
-                  <div className="mb-4">
+                  <motion.p className="mb-1">Capacite : {product.capacity} Oeufs</motion.p>
+                  <motion.p className="mb-1">Puissance : {product.puissance}W Max</motion.p>
+                  <motion.p className="mb-1">Tension : {product.tension['AC']}V AC/ {product.tension.DC}V DC</motion.p>
+                  <motion.p className="mb-1">Poid : {product.poid}Kg</motion.p>
+                  <motion.p className="mb-1">Guaranty : {product.guaranty} an</motion.p>
+                  <motion.p className="mb-1">Taux d'ecclosion : {product.taux[0]} à {product.taux[1]}%</motion.p>
+                  <motion.div className="mb-4">
                     <h5>Prix:</h5>
                     <div  className={styles.product_price}>
                       <del className="mr-2">${product.price[0]}</del> ${product.price[1]}
                     </div>
-                  </div>
-                  <p  className={styles.product_text_danger}>
+                  </motion.div>
+                  <motion.p className={styles.product_text_danger}>
                     Puissance necessaire en energie solaires qu'il vous faut
-                  </p>
-                  <p className="mb-1">Panneau solaire : {product.power}W</p>
-                  <p className="mb-1">Batterie : {product.battery['voltage']}V / {product.battery['current']}Ah</p>
-
-                  <p>
+                  </motion.p>
+                  <motion.p className="mb-1">Panneau solaire : {product.power}W</motion.p>
+                  <motion.p className="mb-1">Batterie : {product.battery['voltage']}V / {product.battery['current']}Ah</motion.p>
+                  <motion.p>
                     <a href="#contact" className={styles.product_pay_btn}>
-                      Acheter
+                      <span>Acheter</span>
+                      <AiFillPlayCircle/>
                     </a>
-                  </p>
-                </div>
+                  </motion.p>
+                </motion.div>
             </motion.li>
           // </Fade>
           ))}
