@@ -124,7 +124,16 @@ export const Footer: React.FC = () => {
         </motion.ul>
       </motion.div>
 
-
+      <motion.div className={styles.footer_copy_right}>
+        <motion.p>
+          Copyright &copy; 2020 All rights reserved | {''}
+          <span>Made with <FaHeart /> by 
+            <a href="https://www.fidbagraphics.com" target="_blank">
+              {''} Fidba Graphics
+            </a>
+          </span>
+        </motion.p>
+      </motion.div>
     </motion.footer>
   );
 };
