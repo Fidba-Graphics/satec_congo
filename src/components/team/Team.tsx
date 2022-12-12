@@ -10,7 +10,7 @@ import styles from './team.module.scss';
 
 export const Team: React.FC<{}> = () => {
   return (
-    <motion.section className={styles.team_section} id="team-section">
+    <motion.section className={styles.team_section} id="team">
       <div className={styles.team_wrapper}>
         {/* <Fade bottom> */}
           <div className={styles.team_header}>
