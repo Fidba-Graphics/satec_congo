@@ -78,3 +78,45 @@
 
 
 
+
+.footer_copy_right {
+  width: 100%;
+  height: 80px;
+  @include d-flex(space-between, center);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $secondary-color;
+  color: $header-color;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  position: relative;
+    // position: absolute;
+  // z-index: 2;
+  // top: 60px;
+  // left: 0;
+  // right: 0;
+
+  p {
+    @include d-flex(center, center);
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+
+    span {
+      margin-left: 2px;
+    }
+
+    svg {
+      transform: translateY(2px);
+      font-size: 1rem;
+    }
+
+    a {
+      color: $header-color;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }  
+}
