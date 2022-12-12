@@ -1,0 +1,80 @@
+@import '../../assets/scss/variable';
+@import '../../assets/scss/mixins';
+
+.footer_section {
+  width: 100%;
+  background-color: $darkbleu-bgcolor;
+}
+
+.footer_one {
+  width: 100%;
+  padding: 3rem 1rem 2rem;
+}
+
+.footer_lists {
+  width: 100%;
+  margin: 0 auto;
+  @include d-flex(center, center);
+  flex-flow: wrap;
+  gap: 1rem 2rem;
+
+  & > li {
+    width: 100%;
+    max-width: 400px;
+    font-size: 0.875rem;
+    // margin: 0.5rem 1rem;
+    padding: 1rem;
+    font-weight: 400;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: $header-color;
+    }
+    
+    .item_content {
+      p {
+        @include d-flex(flex-start, flex-start);
+        column-gap: 4px;
+        margin: 1rem 0;
+        font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 1.625em;
+
+        &.contact > svg {
+          margin-top: 7px;
+        }
+      }
+      
+      p > a {
+        @include d-flex(flex-start, center);
+        color: $text-color;
+      }
+
+      svg {
+        font-size: 1.3rem;
+        color: $header-color;
+        margin-right: 0.6rem;
+      }
+
+      .social_media_wrapper a svg {
+        background-color: rgba(255, 255, 255, 0.1);
+        margin-top: 0.275rem;
+        padding: 0.4rem;
+        font-size: 2rem;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        box-shadow: 0px 11px 32px -12px $text-color;
+
+        &:hover {
+          background-color: $secondary-color;
+          color: $header-color;
+        }
+      }
+    }
+  }
+}
+
+
+
