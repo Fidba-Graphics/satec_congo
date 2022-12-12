@@ -20,19 +20,19 @@ export const Header: React.FC<Props> = ({ children }) => {
   const MenuLinks: MenuItem[] = [
     {
       name: 'A propos',
-      linkTo: 'about-section'
+      linkTo: 'about'
     },
     {
       name: 'Our Services',
-      linkTo: 'services-section'
+      linkTo: 'services'
     },
     {
       name: 'Produits',
-      linkTo: 'products-section'
+      linkTo: 'products'
     },
     {
       name: 'Team',
-      linkTo: 'team-section'
+      linkTo: 'team'
     },
     {
       name: 'Contacts',
@@ -68,7 +68,7 @@ export const Header: React.FC<Props> = ({ children }) => {
       </>
       <motion.div className={`header-scrolled  ${colorChange && 'colorChange'} d-flex flex-center`}>
         <motion.div className="logo">
-          <a href="#home-section">
+          <a href="#home">
             <img src={logo} alt="logo" />
           </a>
         </motion.div>

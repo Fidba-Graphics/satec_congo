@@ -156,7 +156,7 @@ export const Products: React.FC<{}> = () => {
   ]
 
   return (
-    <motion.section className={styles.products_section} id="products-section">
+    <motion.section className={styles.products_section} id="products">
       <motion.div className={styles.products_section_one}>
         <motion.div className={styles.products_header}>
           {/* <Fade bottom> */}

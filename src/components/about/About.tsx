@@ -9,7 +9,7 @@ import styles from './about.module.scss';
 
 export const About: React.FC<{}> = () => {
   return (
-    <motion.section className={styles.about_section} id="about-section">
+    <motion.section className={styles.about_section} id="about">
       <motion.div className={styles.articles_wrapper}>
 
         <motion.article className={styles.article}>

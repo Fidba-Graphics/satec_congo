@@ -15,7 +15,7 @@ import styles from './services.module.scss';
 
 export const Services: React.FC<{}> = () => {
   return (
-    <motion.section className={styles.services_section} id="services-section">
+    <motion.section className={styles.services_section} id="services">
       <motion.div className={styles.services_header}>
         <motion.p className={styles.services_sub_title}>Nos Services</motion.p>
         <motion.h2 className={styles.services_title}>Nous offrons des services</motion.h2>
