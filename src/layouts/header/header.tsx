@@ -4,7 +4,7 @@ import { MenuItem } from '../../modal/index';
 import { IconContext } from "react-icons";
 import { FiMenu } from "react-icons/fi";
 import { CgClose } from 'react-icons/cg';
-import { FaAngleDoubleRight, FaArrowRight } from 'react-icons/fa';
+import { FaAngleDoubleRight } from 'react-icons/fa';
 import logo from "../../assets/images/logo-removebg.png";
 // import styles from './header.module.scss';
 import './header.scss';

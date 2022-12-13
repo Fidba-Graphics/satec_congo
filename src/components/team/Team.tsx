@@ -1,4 +1,5 @@
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { fadeLeft } from '../../constants';
 
 import image1 from '../../assets/images/team1.jpeg';
 import image2 from '../../assets/images/team2.jpeg';
@@ -10,7 +11,7 @@ import styles from './team.module.scss';
 
 export const Team: React.FC<{}> = () => {
   return (
-    <motion.section className={styles.team_section} id="team">
+    <section className={styles.team_section} id="team">
       <div className={styles.team_wrapper}>
         {/* <Fade bottom> */}
           <div className={styles.team_header}>
@@ -18,9 +19,14 @@ export const Team: React.FC<{}> = () => {
             <h2 className={styles.team_title}>Leadership</h2>
           </div>
         {/* </Fade> */}
-        <motion.ul className={styles.teams_wrapper}>
+        <ul className={styles.teams_wrapper}>
           {/* <Fade bottom> */}
-              <motion.li className={styles.team_item}
+              <motion.li 
+                className={styles.team_item}
+                variants={fadeLeft}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
                 data-aos="fade"
                 data-aos-delay="100"
               >
@@ -42,7 +48,12 @@ export const Team: React.FC<{}> = () => {
               </motion.li>
           {/* </Fade> */}
           {/* <Fade bottom> */}
-              <motion.li className={styles.team_item}
+              <motion.li 
+                className={styles.team_item}
+                variants={fadeLeft}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
                 data-aos="fade"
                 data-aos-delay="200"
               >
@@ -61,7 +72,12 @@ export const Team: React.FC<{}> = () => {
               </motion.li>
           {/* </Fade> */}
           {/* <Fade bottom> */}
-              <motion.li className={styles.team_item}
+              <motion.li 
+                className={styles.team_item}
+                variants={fadeLeft}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
                 data-aos="fade"
                 data-aos-delay="300"
               >
@@ -81,7 +97,12 @@ export const Team: React.FC<{}> = () => {
               </motion.li>
           {/* </Fade> */}
           {/* <Fade bottom> */}
-              <motion.li className={styles.team_item}
+              <motion.li 
+                className={styles.team_item}
+                variants={fadeLeft}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
                 data-aos="fade"
                 data-aos-delay="100"
               >
@@ -101,7 +122,12 @@ export const Team: React.FC<{}> = () => {
               </motion.li>
           {/* </Fade> */}
           {/* <Fade bottom> */}
-              <motion.li className={styles.team_item}
+              <motion.li 
+                className={styles.team_item}
+                variants={fadeLeft}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
                 data-aos="fade"
                 data-aos-delay="200"
               >
@@ -125,7 +151,12 @@ export const Team: React.FC<{}> = () => {
               </motion.li>
           {/* </Fade> */}
           {/* <Fade bottom> */}
-              <motion.li className={styles.team_item}
+              <motion.li 
+                className={styles.team_item}
+                variants={fadeLeft}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
                 data-aos="fade"
                 data-aos-delay="300"
               >
@@ -144,8 +175,8 @@ export const Team: React.FC<{}> = () => {
                 </motion.div>
               </motion.li>
           {/* </Fade> */}
-        </motion.ul>
+        </ul>
       </div>
-    </motion.section>
+    </section>
   );
 }

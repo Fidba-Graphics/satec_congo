@@ -71,7 +71,7 @@ export const Contacts: React.FC<{}> = () => {
           {/* </Fade> */}
           {/* <Fade bottom> */}
             <motion.div className={styles.btn_div}>
-              <button type="submit">
+              <button type="submit" aria-label="keep_in_touch">
                 Send
               </button>
             </motion.div>

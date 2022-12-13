@@ -1,5 +1,7 @@
 import React from "react";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { fadeLeft } from '../../constants';
+
 import { ProductItem } from '../../modal/index';
 
 import Prod1 from '../../assets/images/satec2.png';
@@ -156,9 +158,11 @@ export const Products: React.FC<{}> = () => {
   ]
 
   return (
-    <motion.section className={styles.products_section} id="products">
-      <motion.div className={styles.products_section_one}>
-        <motion.div className={styles.products_header}>
+    <section 
+      className={styles.products_section}
+      id="products">
+      <div className={styles.products_section_one}>
+        <div className={styles.products_header}>
           {/* <Fade bottom> */}
             <h2 className={styles.products_title}>Nos Produits</h2>
           {/* </Fade> */}
@@ -171,12 +175,19 @@ export const Products: React.FC<{}> = () => {
               SATEC - Congo sarl.
             </p>
           {/* </Fade> */}
-        </motion.div>
+        </div>
 
-        <motion.ul className={styles.products_wrapper}>
+        <ul className={styles.products_wrapper}>
           {ProductsElement.map((product: ProductItem) => (  
           // <Fade bottom>
-            <motion.li key={product.id} className={styles.product_item}>
+            <motion.li
+              key={product.id}
+              className={styles.product_item}
+              variants={fadeLeft}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              >
               <div className={styles.product_item_img}>
                 <figure>
                   <img src={product.figure} alt={product.id} className={styles.product_img_fluid}/>
@@ -186,7 +197,10 @@ export const Products: React.FC<{}> = () => {
                 <p className={styles.product_capacity}>
                   Capacité {product.capacity} oeufs
                 </p>
-                <button type="button" className={styles.product_link}>
+                <button
+                type="button"
+                aria-label="product"
+                className={styles.product_link}>
                   <a href={`#${product.id}`} className="btn view-btn ml-1 rounded-0">
                     Details
                   </a>
@@ -195,14 +209,21 @@ export const Products: React.FC<{}> = () => {
             </motion.li>
           // </Fade>
           ))}
-        </motion.ul>
-      </motion.div>
+        </ul>
+      </div>
       
-      <motion.div className={styles.products_section_two}>
-        <ul className={styles.products_details_wraper}>
+      <div className={styles.products_section_two}>
+        <ul className={styles.products_details_wraper} >
           {ProductsElement.map((product: ProductItem) => (
           // <Fade left>
-            <motion.li className={styles.product_details} id={product.id}>
+            <motion.li
+              className={styles.product_details}
+              id={product.id}
+              variants={fadeLeft}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              >
                 <motion.div className={styles.product_img}>
                   <img src={product.figure} alt={product.id} className={styles.img} />
                 </motion.div>
@@ -239,7 +260,7 @@ export const Products: React.FC<{}> = () => {
           // </Fade>
           ))}
         </ul>
-      </motion.div>
-    </motion.section>
+      </div>
+    </section>
   );
 }

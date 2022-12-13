@@ -1,20 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion"
 
-import { IconContext } from "react-icons";
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { TbBrandInstagram,  } from 'react-icons/tb';
 import {
   FaFacebookF,
   FaWhatsapp,
   FaHeart,
-  FaMapMarkerAlt
+  // FaMapMarkerAlt
 } from "react-icons/fa";
 import {
   MdOutlineSubdirectoryArrowRight,
-  MdOutlineKeyboardArrowRight
 } from "react-icons/md";
-import {FiPhoneCall, FiMapPin} from "react-icons/fi";
+import { FiPhoneCall } from "react-icons/fi";
 import { BiMap, BiPaperPlane } from 'react-icons/bi';
 
 import styles from './footer.module.scss';
@@ -138,4 +136,3 @@ export const Footer: React.FC = () => {
   );
 };
 
-// export default Footer;

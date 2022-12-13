@@ -1,42 +1,39 @@
-import { motion } from "framer-motion"
 import { BsArrowRightShort } from "react-icons/bs";
-// import { AiOutlineArrowRight } from "react-icons/ai";
-// import Fade from "react-reveal/Fade";
-// // const Fade = require("react-reveal/Fade");
 import styles from './intro.module.scss';
-
+// import Fade from "react-reveal/Fade";
+// const Fade = require("react-reveal/Fade");
 
 export const Intro: React.FC<{}> = () => {
   return (
-    <motion.section
+    <section
       className={styles.intro_section}
       id="home"
-      data-aos="fade"
+      data-aos="zoom-in-left"
       data-stellar-background-ratio="0.5"
     >
-      <motion.div className={styles.overlay_bg}>
-        <motion.div className={styles.container} data-aos="fade-up" data-aos-delay="400">
+      <div className={styles.overlay_bg}>
+        <div className={styles.container} data-aos="fade-up" data-aos-delay="400">
           {/* <Fade bottom> */}
-            <motion.h1 className={styles.intro_title}>
+            <h1 className={styles.intro_title}>
               Etês vous passionné <br />
               de la technologie ?
-            </motion.h1>
+            </h1>
           {/* </Fade> */}
           {/* <Fade bottom> */}
-            <motion.p className={styles.intro_subtitle}>
+            <p className={styles.intro_subtitle}>
               La solution c'est nous! SATEC - Congo sarl.
-            </motion.p>
+            </p>
           {/* </Fade> */}
           {/* <Fade bottom> */}
           <a href="#services">
-            <motion.button className={styles.intro_btn} type="submit">
+            <button className={styles.intro_btn} type="submit" aria-label="services">
               Nos Services <BsArrowRightShort/>
-            </motion.button>
+            </button>
             </a>
           {/* </Fade> */}
-        </motion.div>
-      </motion.div>
-    </motion.section>
+        </div>
+      </div>
+    </section>
   );
 };
 

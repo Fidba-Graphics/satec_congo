@@ -1,17 +1,14 @@
 import { motion } from "framer-motion";
 import {
-  FaQuoteLeft,
+  // FaQuoteLeft,
   FaQuoteRight
 } from "react-icons/fa";
-import {
-  RiDoubleQuotesL,
-  RiDoubleQuotesR
-} from "react-icons/ri";
+
 import Ben from '../../assets/images/ben.png';
+import styles from './testimonial.module.scss';
 
 // const Fade = require("react-reveal/Fade");
 
-import styles from './testimonial.module.scss';
 
 export const Testimonials: React.FC<{}> = () => {
   return (
@@ -62,7 +59,7 @@ export const Testimonials: React.FC<{}> = () => {
           </div>
         </div>
         <div className={styles.blog_btn}>
-          <button type="button">
+          <button type="button" aria-label="blog">
             <a href="#">voir notre blog</a>
           </button>
         </div>

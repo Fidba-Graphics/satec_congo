@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 import image1 from '../../assets/images/admin.jpeg';
 import image2 from '../../assets/images/about.jpg';
@@ -9,16 +9,20 @@ import styles from './about.module.scss';
 
 export const About: React.FC<{}> = () => {
   return (
-    <motion.section className={styles.about_section} id="about">
-      <motion.div className={styles.articles_wrapper}>
+    <section className={styles.about_section} id="about">
+      <div className={styles.articles_wrapper}>
 
-        <motion.article className={styles.article}>
-          <motion.div className={styles.article_content}>
+        <article className={styles.article}>
+          <div className={styles.article_content}>
             {/* <Fade bottom> */}
               <h2 className={styles.article_title}>A propos de nous</h2>
             {/* </Fade> */}
             {/* <Fade bottom> */}
-              <motion.p className={styles.article_text}>
+            <p
+              className={styles.article_text}
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+              >
                 La grandeur et la force d’un homme réside dans les idées,
                 forces qui orientent un peuple dans un espace donné.
                 Convaincus de l’impérieuse et absolue nécessité de faire de
@@ -31,18 +35,24 @@ export const About: React.FC<{}> = () => {
                 technique pour la Sécurité, la qualité et la garantie des
                 services afin d’offrir au peuple congolais l’occasion
                 d’engager la R D Congo sur l’orbite de l’émergence.
-              </motion.p>
+            </p>
             {/* </Fade> */}
-          </motion.div>
+          </div>
           {/* <Fade bottom> */}
-            <motion.div className={styles.article_img}>
+          <div
+            className={styles.article_img}
+            data-aos="fade-left"
+            data-aos-anchor="#example-anchor"
+            data-aos-offset="500"
+            data-aos-duration="500"
+              >
               <img src={image1} alt="about-img1" />
-            </motion.div>
+          </div>
           {/* </Fade> */}
-        </motion.article>
+        </article>
 
-        <motion.article className={styles.article}>
-          <motion.div className={styles.article_content}>
+        <article className={styles.article}>
+          <div className={styles.article_content}>
             {/* <Fade bottom> */}
               <h2 className={styles.article_title}>
                 Domaines d’action ou d’intervention{" "}
@@ -60,14 +70,20 @@ export const About: React.FC<{}> = () => {
                 notamment :
               </motion.p>
             {/* </Fade> */}
-          </motion.div>
+          </div>
           {/* <Fade bottom> */}
-            <motion.div className={styles.article_img}>
+            <div
+              className={styles.article_img}
+              data-aos="fade-left"
+              data-aos-anchor="#example-anchor"
+              data-aos-offset="500"
+              data-aos-duration="500"
+              >
               <img src={image2} alt="about-img2" />
-            </motion.div>
+            </div>
             {/* </Fade> */}
-        </motion.article>
-      </motion.div>
-  </motion.section>
+        </article>
+      </div>
+  </section>
   );
 }
