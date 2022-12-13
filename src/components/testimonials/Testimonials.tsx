@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { fadeLeft } from '../../constants';
+
 import {
   // FaQuoteLeft,
   FaQuoteRight
@@ -6,9 +8,7 @@ import {
 
 import Ben from '../../assets/images/ben.png';
 import styles from './testimonial.module.scss';
-
 // const Fade = require("react-reveal/Fade");
-
 
 export const Testimonials: React.FC<{}> = () => {
   return (
@@ -23,10 +23,15 @@ export const Testimonials: React.FC<{}> = () => {
             </h2>
           </div>
         {/* </Fade> */}
-
     
         {/* <Fade bottom> */}
-          <motion.div className={styles.testimonials_wrapper}>
+          <motion.div
+          className={styles.testimonials_wrapper}
+          variants={fadeLeft}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          >
             <motion.article className={styles.testimony} >
               <motion.div className={styles.testimony_text}>
                 <FaQuoteRight/>

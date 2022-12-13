@@ -20,18 +20,20 @@ export const Navbar: React.FC<{}> = ( ) => {
 
       <ul className={styles.social_media_wrapper}>
         <li className={styles.social_media}>
-          <a href="https://www.facebook.com/pages/category/Business-Service/SATEC-Congo-incubation-113625197074726/">
+          <a href="https://www.facebook.com/pages/category/Business-Service/SATEC-Congo-incubation-113625197074726/" title="facebook">
             <FaFacebookF/>
           </a>
         </li>
         <li className={styles.social_media}>
-          <a href="#"><AiOutlineTwitter/></a>
+          <a href="https://www.facebook.com/satecongo?mibextid=LQQJ4d" title="twitter">
+            <AiOutlineTwitter/>
+          </a>
         </li>
         <li className={styles.social_media}>
-          <a href="#"><TbBrandInstagram/></a>
+          <a href="https://instagram.com/sateccongo?igshid=YWJhMjlhZTc=" title="instagram"><TbBrandInstagram/></a>
         </li>
         <li className={styles.social_media}>
-          <a href="#"><AiOutlineDribbble/></a>
+          <a href="https://wa.me/+243971838655" title="whatsApp"><AiOutlineDribbble/></a>
         </li>
       </ul>
     </nav> 

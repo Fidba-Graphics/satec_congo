@@ -44,7 +44,7 @@ export const Footer: React.FC = () => {
                 </a>
               </p>
               <p>
-                <a href="#">
+                <a href="https://www.facebook.com/satecongo?mibextid=LQQJ4d">
                   <MdOutlineSubdirectoryArrowRight/>
                   Notre blog
                 </a>
@@ -99,18 +99,17 @@ export const Footer: React.FC = () => {
                 </p>
                 <p>Soyons socials</p>
                 <div className={styles.social_media_wrapper}>
-                  <a href="https://www.facebook.com/pages/category/Business-Service/SATEC-Congo-incubation-113625197074726/"
-                    target="blank"
-                  >
+                  <a href="https://www.facebook.com/satecongo?mibextid=LQQJ4d"
+                    target="blank" title="facebook">
                     <FaFacebookF />
                   </a>
-                  <a href="https://wa.me/+243971838655">
+                  <a href="https://wa.me/+243971838655" title="whatsApp">
                     <FaWhatsapp />
                   </a>
-                  <a href="#">
-                      <TbBrandInstagram />
+                  <a href="https://instagram.com/sateccongo?igshid=YWJhMjlhZTc=" title="instagram">
+                    <TbBrandInstagram />
                   </a>
-                  <a href="#">
+                  <a href="https://www.facebook.com/pages/category/Business-Service/SATEC-Congo-incubation-113625197074726/" title="facebook">
                     {/* <IconContext.Provider value={{ className: "footer-icon" }}> */}
                     <AiOutlineTwitter />
                     {/* </IconContext.Provider> */}
@@ -126,7 +125,7 @@ export const Footer: React.FC = () => {
         <motion.p>
           Copyright &copy; 2020 All rights reserved | {''}
           <span>Made with <FaHeart /> by 
-            <a href="https://www.fidbagraphics.com" target="_blank">
+            <a href="https://www.fidbagraphics.com" title="fidbagraphics" target="blank">
               {''} Fidba Graphics
             </a>
           </span>

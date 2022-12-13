@@ -1,19 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion"
+// const Fade = require("react-reveal/Fade");
 
 import styles from './contacts.module.scss';
-// const Fade = require("react-reveal/Fade");
 
 export const Contacts: React.FC<{}> = () => {
   return (
-    <motion.section className={styles.contacts_section} id="contacts">
+    <section className={styles.contacts_section} id="contacts">
         {/* <Fade bottom> */}
-        <motion.div className={styles.contacts_header}>
-          <motion.h2 className={styles.contacts_title}>CONTACT </motion.h2>
-        </motion.div>
+        <div className={styles.contacts_header}>
+          <h2 className={styles.contacts_title}>CONTACT </h2>
+        </div>
         {/* </Fade> */}
-      <motion.div className={styles.contacts_wrapper}>
-        <motion.article className={styles.contact_content}>
+      <div className={styles.contacts_wrapper}>
+        <article className={styles.contact_content}>
             {/* <Fade bottom> */}
               <p>
                 Pour tous vos besoins d'innovation technique, Veuillez nous
@@ -47,7 +47,7 @@ export const Contacts: React.FC<{}> = () => {
             {/* <Fade bottom> */}
               <p>Direction Technique : +243 971 838 655</p>
             {/* </Fade> */}
-        </motion.article>
+        </article>
 
         <form action="https://formspree.io/f/xnqlovnj" method="post" id="form">
           <motion.div className={styles.input_wrapper}>
@@ -77,7 +77,7 @@ export const Contacts: React.FC<{}> = () => {
             </motion.div>
           {/* </Fade> */}
         </form>
-      </motion.div>
-    </motion.section>
+      </div>
+    </section>
   );
 }
