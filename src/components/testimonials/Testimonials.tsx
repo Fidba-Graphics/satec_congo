@@ -47,7 +47,7 @@ export const Testimonials: React.FC<{}> = () => {
                <motion.div className={styles.author_img}>
                 <img src={Ben} alt="ben_dev"/>
               </motion.div>
-              <p className={styles.testimony_name}>- Ben Mukebo Full-stack developer -</p>
+              <p className={styles.testimony_name}>- Ben Mukebo <strong>Full-stack developer</strong> -</p>
               {/* <p className={styles.testimony_position}>DEVELOPER</p> */}
             </motion.div>
           </motion.div>

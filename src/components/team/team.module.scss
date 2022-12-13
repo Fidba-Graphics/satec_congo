@@ -1,11 +1,12 @@
 @import '../../assets/scss/variable';
 @import '../../assets/scss/mixins';
+@import '../../assets/scss/config';
 
 .team_section {
   width: 100%;
   // background-color: #ccc;
   background-color: $header-color;
-  padding: 3rem 1rem;
+  padding: 3rem 0rem;
   @include d-flex(center, normal);
   flex-direction: column;
   row-gap: 2rem;
@@ -24,7 +25,7 @@
     margin: 1rem auto;
     text-align: center; 
     color: $primary-color;
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     padding-bottom: 1rem;
     
@@ -42,7 +43,7 @@
     // text-transform: uppercase;
     text-align: center; 
     color: $secondary-color;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 400;
     // margin-bottom: 1rem;
   }
@@ -50,10 +51,10 @@
 
 .teams_wrapper {
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 1rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 1.5rem;
+  grid-gap: 0 1rem;
 }
 
 .team_item {
@@ -68,8 +69,8 @@
   background-color: $header-color;
   
   .team_img {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     margin: 1rem auto;
     // border: 4px solid $secondary-color;
     // border-radius: 50%;
@@ -82,7 +83,7 @@
       border-radius: 50%;
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
-      transition: all .3s ease;
+      transition:$sm-transition;
 
       &:hover {
         -webkit-filter: none;
@@ -93,20 +94,21 @@
 
   .team_content {
     min-height: 200px;
-    padding: 1rem 2rem 2rem;
+    padding: 1rem 1rem 2rem;
   }
 
   .team_name {
     width: 100%;
     color: $primary-color;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
     font-weight: 700;
     padding-bottom: 1rem;
   }
 
   .team_position {
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     padding-bottom: 1rem;
   }
@@ -114,7 +116,8 @@
 
   .team_bio {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
     font-weight: 400;
   }
 }
@@ -123,9 +126,13 @@
   .team_item {
     max-width: 480px;
 
+    .team_img {
+      width: 140px;
+      height: 140px;
+    }
+
     .team_content {
-      padding: 1rem 3rem 2rem;
-      // background-color: rgb(65, 41, 11);
+      padding: 1rem 3rem;
     }
   }
 }
@@ -137,8 +144,13 @@
     .team_item {
       max-width: 370px;
 
+      .team_img {
+        width: 130px;
+        height: 130px;
+      }
+
       .team_content {
-        padding: 1rem 3rem;
+        padding: 1rem;
       }
     }
   }
@@ -151,6 +163,11 @@
 
     .team_item {
       max-width: 400px;
+
+      .team_img {
+        width: 150px;
+        height: 150px;
+      }
     }
   }
 }

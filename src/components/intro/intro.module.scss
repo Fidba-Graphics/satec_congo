@@ -1,5 +1,6 @@
 @import '../../assets/scss/variable';
 @import '../../assets/scss/mixins';
+@import '../../assets/scss/config';
 
 .intro_section {
   width: 100%;
@@ -17,7 +18,6 @@
     padding: 0 1rem;
     background-color: rgba(4,9,30,0.8);
     @include d-flex(normal, center);
-    // background-color: antiquewhite;
     position: relative;
   }
 
@@ -26,20 +26,24 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -60%);
+    // background-color: aqua;
+    width: 90%;
+    max-width: 300px;
   }
   
   .intro_title {
     color: #fff;
     font-size: 2rem; //36
+    line-height: 3rem;
     font-weight: 700;
     margin-bottom: 1.65rem;
     text-transform: uppercase;
   }
 
   .intro_subtitle {
-    font-size: 0.875rem; //16
+    font-size: 1rem; //16
     font-weight: 300; //400
-    line-height: 1.625em;
+    line-height: 1.625rem;
     margin-bottom: 1rem;
   }
 
@@ -47,21 +51,20 @@
     @include d-flex(center, center);
     font-size: 1rem;
     font-weight: 400;
-    padding: 0.8rem 1rem;
-    border-radius: 0.25rem;
-    background-color: $secondary-color;
-    color: $header-color;
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+    // background-color: $secondary-color;
+    // color: $header-color;
+    @extend %btn-hovered;
     transition: all 0.4s ease-in-out;
 
     svg {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       margin-left: 0.4rem;
       transition: all 0.3s ease-in-out;
     }
 
     &:hover {
-      background-color: $white;
-      color: $secondary-color;
 
       svg {
         transform: translateX(6px);
@@ -80,30 +83,42 @@
   // }
 }
 
+@include media(480px) {
+  .intro_section {
+    .container {
+      width: 80%;
+      max-width: 400px;
+    }
+  }
+}
+
 @include media(768px) {
   .intro_section {
     width: 100%;
     // height: 700px;
 
-    .intro_title {
-      font-size: 3.5rem;
-      line-height: 4.5rem;
+    .container {
+      width: 80%;
+      max-width: 540px;
+    }
 
-      font-weight: 700;
+    .intro_title {
+      // font-size: 3.5rem;
+      // line-height: 4.5rem;
       margin-bottom: 1rem;
     }
 
     .intro_subtitle {
-      font-size: 2.2rem;
+      // font-size: 2.2rem;
       font-weight: 400;
       margin-bottom: 2rem;
     }
 
     .intro_btn {
-      font-size: 2rem;
-      font-weight: 700;
-      padding: 1.2rem 2rem;
-      border-radius: 0.5rem;
+      // font-size: 2rem;
+      font-weight: 600;
+      // padding: 1.2rem 2rem;
+      // border-radius: 0.5rem;
   
       svg {
         font-size: 23px;

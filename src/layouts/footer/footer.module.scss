@@ -16,7 +16,7 @@
   margin: 0 auto;
   @include d-flex(center, center);
   flex-flow: wrap;
-  gap: 1rem 2rem;
+  gap: 1rem;
 
   & > li {
     width: 100%;
@@ -27,9 +27,9 @@
     font-weight: 400;
 
     h3 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: 700;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       color: $header-color;
     }
     
@@ -38,7 +38,7 @@
         @include d-flex(flex-start, flex-start);
         column-gap: 4px;
         margin: 1rem 0;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 300;
         line-height: 1.625em;
 
@@ -102,7 +102,7 @@
     text-align: center;
     margin: 0 auto;
     padding: 0 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
 
     span {
       margin-left: 2px;
@@ -125,11 +125,12 @@
   .footer_lists {
     @include d-flex(space-around, flex-start);
     flex-flow: row wrap;
-    width: 95%;
+    width: 100%;
 
     & > li {
-      width: 40vw;
+      width: 45vw;
       max-width: 280px;
+      min-height: 220px;
     }
   }
 
@@ -141,11 +142,9 @@
 @include media(768px) {
 
   .footer_lists {
-    width: 90%;
-    gap: 1rem 3rem;
 
     & > li {
-      width: 25vw;
+      width: 30vw;
     }
   }
 
@@ -172,11 +171,11 @@
 
 @include media(992px) {
   .footer_lists {
-    width: 95%;
-    flex-flow: row wrap;
+    width: 100%;
+    flex-flow: row nowrap;
 
     & > li {
-      width: 30vw;
+      width: 25vw;
 
     }
   }
@@ -190,9 +189,10 @@
 @include media(1200px) {
   .footer_lists {
     max-width: 1400px;
-    flex-flow: row nowrap;
+    width: 95%;
 
     & > li {
+      width: 30vw;
       max-width: 320px;
     }
   }

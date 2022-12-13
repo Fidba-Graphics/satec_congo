@@ -23,7 +23,9 @@ export const Intro: React.FC<{}> = () => {
             </motion.h1>
           {/* </Fade> */}
           {/* <Fade bottom> */}
-            <motion.p className={styles.intro_subtitle}>La solution c'est nous !</motion.p>
+            <motion.p className={styles.intro_subtitle}>
+              La solution c'est nous! SATEC - Congo sarl.
+            </motion.p>
           {/* </Fade> */}
           {/* <Fade bottom> */}
           <a href="#services">

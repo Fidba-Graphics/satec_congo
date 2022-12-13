@@ -1,5 +1,6 @@
 @import '../../assets/scss/variable';
 @import '../../assets/scss/mixins';
+@import '../../assets/scss/config';
 
 .contacts_section {
   width: 100%;
@@ -19,7 +20,7 @@
     margin: 1rem auto;
     text-align: center; 
     color: $primary-color;
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     padding-bottom: 1rem;
 
@@ -38,7 +39,7 @@
   width: 100%;
   @include d-flex(space-between, center);
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 article.contact_content {
@@ -47,9 +48,9 @@ article.contact_content {
   text-align: center; 
 
   p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 400;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
   }
 }
 
@@ -64,7 +65,7 @@ form {
 
   input {
     width: 100%;
-    margin: 5px auto 24px;
+    margin: 5px auto 0.8rem;
     border: 1px solid #d0d9d4;
     border-radius: 0.25rem;
     padding: 15px 16px;
@@ -100,13 +101,13 @@ form {
     font-size: 17px;
     line-height: 24px;
     font-weight: 500;
-    color: $header-color;
     border-radius: 4px;
-    background-color: $secondary-color;
+    color: $secondary-color;
+    border: 1px solid $secondary-color;
+    @extend %btn-clicked;
     letter-spacing: 0.03em;
     padding: 12px;
     margin-bottom: 10px;
-    transition: all 0.4s ease 0.2s;
   }
 }
 
@@ -120,7 +121,7 @@ form {
 
     .input_wrapper {
       @include d-flex(flex-start, center);
-      column-gap: 1.5rem;
+      column-gap: 0.5rem;
 
       & > * {
         flex: 1;
@@ -145,10 +146,10 @@ form {
     // max-width: 540px;
   
     p {
-      font-size: 1.8rem;
-      line-height: 2.4rem;
+      // font-size: 1.8rem;
+      // line-height: 2.4rem;
       font-weight: 400;
-      margin: 2rem 0;
+      margin: 1rem 0;
     }
   }
 

@@ -24,7 +24,7 @@
     margin: 1rem auto;
     text-align: center; 
     color: $primary-color;
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 700;
     padding-bottom: 1rem;
 
@@ -42,7 +42,8 @@
     width: 90%;
     text-align: center; 
     // color: $secondary-color;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6rem;
     font-weight: 400;
     max-width: 780px;
     margin: 1rem auto;
@@ -103,17 +104,17 @@
     p {
       // color: $text-color;
       color: $primary-color;
-      font-size: 1.5rem;
-      font-weight: 700;
+      font-size: 1rem;
+      font-weight: 600;
       padding: 1rem;
     }
     
     button {
-      margin: 0 auto 1.5rem;
+      margin: 0 auto 1rem;
       color: $secondary-color;
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-weight: 700;
-      padding: 1rem 2rem;
+      padding: 0.5rem 1rem;
       border: 1px solid $secondary-color;
       border-radius: 4px;
       transition: all 0.3s ease;
@@ -231,7 +232,7 @@
 .product_details {
   // background: linear-gradient(to top, rgba(29, 23, 17, 0.75), rgba(39, 48, 142, 0.4)),
   // url('../../assets/images/home-bg1.jpg') fixed top right;
-  // background: linear-gradient(to top, rgba(29, 23, 17, 0.811), rgba(13, 17, 65, 0.754)),
+  // background: linear-gradient(to top, rgba(29, 23, 17, 0.841), rgba(7, 9, 34, 0.824)),
   // url('../../assets/images/img6.jpg') fixed top right;
     background: linear-gradient(to top, rgba(29, 23, 17, 0.313), rgba(14, 18, 60, 0.193)),
   url('../../assets/images/poducts-bg.jpg') fixed top right;
@@ -269,21 +270,21 @@
 
     h3 {
       color: $header-color;
-      font-size: 2.2rem;
+      font-size: 1.3rem;
       font-weight: 700;
-      padding: 1rem 0 2rem;
+      padding: 1rem 0;
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-weight: 400;
-      margin: 1rem 0;
+      margin: 0.5rem 0;
 
       a {
         height: 100%;
         @include d-flex(center, center);
         column-gap: 0.5rem;
-        font-size: 1.5rem;
+        font-size: 1rem;
         padding: 0.5rem;
         color: $secondary-color;
         text-transform: capitalize;

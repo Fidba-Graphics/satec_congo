@@ -218,9 +218,9 @@ export const Products: React.FC<{}> = () => {
                   <motion.p className="mb-1">Guaranty : {product.guaranty} an</motion.p>
                   <motion.p className="mb-1">Taux d'ecclosion : {product.taux[0]} à {product.taux[1]}%</motion.p>
                   <motion.div className="mb-4">
-                    <h5>Prix:</h5>
+                    <p>Prix:</p>
                     <div  className={styles.product_price}>
-                      <del className="mr-2">${product.price[0]}</del> ${product.price[1]}
+                      <strong className="mr-2">${product.price[0]}</strong> ${product.price[1]}
                     </div>
                   </motion.div>
                   <motion.p className={styles.product_text_danger}>
