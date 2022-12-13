@@ -112,6 +112,70 @@
   }
 }
 
+.blog_wrapper {
+  width: 100%;
+  min-height: 150px;
+  padding: 2rem 0 4rem;
+  @include d-flex(center, center);
+  background-color: $secondary-color;
+  flex-wrap: wrap;
+  text-align: center;
+
+  .blog_text {
+    width: 70%;
+    min-width: 480px;
+    padding: 1rem;
+    font-size: 2rem;
+
+    & > div {
+      margin: 0 auto;
+    }
+  
+    h2 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      font-weight: 700;
+      color: $header-color;
+      padding-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 400;
+      color: $text-color;
+    }
+  }
+
+  .blog_btn {
+    width: 30%;
+    padding: 1rem;
+  
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      background-color: $darkbleu-bgcolor;
+      border-radius: 0.5rem;
+      text-align: center;
+      margin: 0 auto;
+      white-space: nowrap;
+      transition: all 0.3s ease-in-out;
+
+      a {
+        color: $header-color;
+      }
+
+      &:hover {
+        background-color: $header-color;
+
+        a {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
 
 @include media(480px) {
   .testimony {

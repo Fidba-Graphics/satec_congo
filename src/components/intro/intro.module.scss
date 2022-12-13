@@ -40,34 +40,44 @@
     font-size: 0.875rem; //16
     font-weight: 300; //400
     line-height: 1.625em;
+    margin-bottom: 1rem;
   }
 
-  // .intro_btn {
-  //   font-size: 1.5rem;
-  //   font-weight: 400;
-  //   margin-bottom: 1rem;
-  //   padding: 0.5rem 1rem;
-  //   border-radius: 0.5rem;
-  //   background-color: $secondary-color;
-  //   color: $header-color;
-  //   transition: all 0.2s ease-in-out;
-  //   cursor: pointer;
+  .intro_btn {
+    @include d-flex(center, center);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.8rem 1rem;
+    border-radius: 0.25rem;
+    background-color: $secondary-color;
+    color: $header-color;
+    transition: all 0.4s ease-in-out;
 
-  //   &:hover {
-  //     background-color: $white;
-  //     color: $secondary-color;
-  //   }
+    svg {
+      font-size: 1.5rem;
+      margin-left: 0.4rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      background-color: $white;
+      color: $secondary-color;
+
+      svg {
+        transform: translateX(6px);
+      }
+    }
+  }
+
+  // .btn {
+  //   background-color: #fff;
+  //   border-radius: 50px;
+  //   color: #000;
+  //   font-size: 14px;
+  //   font-weight: 700;
+  //   padding: 10px 30px;
+  //   text-transform: uppercase;
   // }
-
-  .btn {
-    background-color: #fff;
-    border-radius: 50px;
-    color: #000;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 10px 30px;
-    text-transform: uppercase;
-  }
 }
 
 @include media(768px) {
@@ -77,34 +87,37 @@
 
     .intro_title {
       font-size: 3.5rem;
-      line-height: 4rem;
+      line-height: 4.5rem;
 
       font-weight: 700;
       margin-bottom: 1rem;
     }
 
     .intro_subtitle {
-      font-size: 1.5rem;
+      font-size: 2.2rem;
       font-weight: 400;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
-    // .intro_btn {
-    //   font-size: 1.5rem;
-    //   font-weight: 400;
-    //   margin-bottom: 1rem;
-    //   padding: 0.5rem 1rem;
-    //   border-radius: 0.5rem;
-    //   background-color: $secondary-color;
-    //   color: $header-color;
-    //   transition: all 0.2s ease-in-out;
-    //   cursor: pointer;
-
-    //   &:hover {
-    //     background-color: $white;
-    //     color: $secondary-color;
-    //   }
-    // }
+    .intro_btn {
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 1.2rem 2rem;
+      border-radius: 0.5rem;
+  
+      svg {
+        font-size: 23px;
+      }
+  
+      &:hover {
+        background-color: $white;
+        color: $secondary-color;
+  
+        svg {
+          transform: translateX(6px);
+        }
+      }
+    }
   }
 }
 
