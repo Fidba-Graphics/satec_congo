@@ -45,10 +45,19 @@ export const Header: React.FC<Props> = ({ children }) => {
   const [colorChange, setColorchange] = useState<boolean>(false);
 
 
+const preventScrolling = () => {
+  if (!burgerClicked) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'unset';
+  }
+}
+
   const handleBurgerClick = () => {
-    setBurgerClicked(!burgerClicked)
+    setBurgerClicked(!burgerClicked);
+    preventScrolling();
     // burgerClicked ? setShowNavBar('show') : setShowNavBar('hidden');
-    console.log('New showSideBar:', burgerClicked);
+    // console.log('New showSideBar:', burgerClicked);
   }
 
   const changeNavbarColor = () =>{
