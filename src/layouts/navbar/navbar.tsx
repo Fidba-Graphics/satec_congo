@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FaFacebookF } from 'react-icons/fa'; //BsFacebook
+import { FaFacebookF } from 'react-icons/fa';
 import { AiOutlineTwitter, AiOutlineDribbble } from 'react-icons/ai';
 import { TbBrandInstagram } from 'react-icons/tb';
 import { BiPaperPlane } from 'react-icons/bi';
@@ -20,7 +20,9 @@ export const Navbar: React.FC<{}> = ( ) => {
 
       <ul className={styles.social_media_wrapper}>
         <li className={styles.social_media}>
-          <a href="#"><FaFacebookF/></a>
+          <a href="https://www.facebook.com/pages/category/Business-Service/SATEC-Congo-incubation-113625197074726/">
+            <FaFacebookF/>
+          </a>
         </li>
         <li className={styles.social_media}>
           <a href="#"><AiOutlineTwitter/></a>

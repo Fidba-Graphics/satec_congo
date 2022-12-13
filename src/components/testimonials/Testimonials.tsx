@@ -34,7 +34,7 @@ export const Testimonials: React.FC<{}> = () => {
               <motion.div className={styles.testimony_text}>
                 <FaQuoteRight/>
                 <motion.p className={styles.text}>
-                  CICO Sarl est la meilleure entreprise avec laquelle
+                  SATEC - Congo sarl est la meilleure entreprise avec laquelle
                   nous avons travaillé. Toute l'équipe a livré avec tact un
                   projet d'une qualité exceptionnelle tout en respectant
                   l'échéancier et le budget. Nous espérons retravailler
@@ -47,12 +47,25 @@ export const Testimonials: React.FC<{}> = () => {
                <motion.div className={styles.author_img}>
                 <img src={Ben} alt="ben_dev"/>
               </motion.div>
-              <p className={styles.testimony_name}>Ben Mukebo Full-stack developer</p>
+              <p className={styles.testimony_name}>- Ben Mukebo Full-stack developer -</p>
               {/* <p className={styles.testimony_position}>DEVELOPER</p> */}
             </motion.div>
-
           </motion.div>
         {/* </Fade> */}
+      </div>
+
+      <div className={styles.blog_wrapper}>
+        <div className={styles.blog_text}>
+          <div className={styles.blog_text}>
+            <h2>Pas encore satisfait de notre tendance ?</h2>
+            <p>Dernières mises à jour du blog</p>  
+          </div>
+        </div>
+        <div className={styles.blog_btn}>
+          <button type="button">
+            <a href="#">voir notre blog</a>
+          </button>
+        </div>
       </div>
     </motion.section>
   );
