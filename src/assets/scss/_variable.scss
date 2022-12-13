@@ -1,17 +1,5 @@
-// $primary-text-color: #272727;
-// $secondary-color: #f1f4fa;
-// $black-bgcolor: #7b8795;
-// $dark-light-color: rgb(61, 61, 61);
-// $light-color: rgb(187, 187, 187);
-// $default-transition: all 0.2s ease-in-out;
-
-
-// $body-text: 1.6rem to 1.8rem; // 14
-// $headings: 1.96rem to 35px; //1.3rem - 21px
-// $subheadings: to 30px;//  16-18px
-
 $primary-color: #222;
-$secondary-color: #f7631b; // #ff5f13;
+$secondary-color: rgb(241, 124, 45); // #ff5f13;
 // $secondary-color: #ff5f13;
 $text-color: #777;
 $header-color: #fff;
@@ -21,10 +9,11 @@ $black: #111;
 
 $darkbleu-bgcolor : rgba(4,9,30,0.9);
 $default-border-radius: 0.5rem;
-$light-bgcolor: #fff;
 
 $light-weight: 400;
 $xs-family: "Poppins",sans-serif;
+$lg-transition: all 0.5s ease-in-out;
+$sm-transition: all 0.3s ease-in-out;
 
 // $mobile: 480px;
 // $tablet: 768px;

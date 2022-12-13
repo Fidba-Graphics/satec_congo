@@ -11,7 +11,9 @@
 html {
   scroll-behavior: smooth;
   // font-size: 62.5%;
-  font-size: 64.5%; // 10px
+  // font-size: 64.5%; // 10px
+    font-size: 10px; // 10px
+    line-height: 16px;
 }
 
 body {
@@ -47,18 +49,48 @@ body {
 }
 
 @include media(480px) {
+  html {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
   ::-webkit-scrollbar {
     width: 5px;
   }
 }
 
 @include media(768px) {
+  html {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
   ::-webkit-scrollbar {
     width: 6px;
   }
 }
 
 @include media(992px) {
+  html {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
+@include media(992px) {
+  html {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
   ::-webkit-scrollbar {
     width: 8px;
   }
