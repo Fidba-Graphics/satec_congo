@@ -1,0 +1,254 @@
+@import '../../assets/scss/variable';
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/config';
+
+// filter: blur(5px);
+
+.header_container {
+  max-width: 100%;
+}
+
+.header-scrolled {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  z-index: 2;
+  top: 50px;
+  left: 0;
+  right: 0;
+  padding: 0 1rem;
+  transition: $lg-transition;
+
+  &::after {
+    content: '';
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    // top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid #39353e;
+  }
+
+  &.colorChange {
+    background-color: $darkbleu-bgcolor;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .logo {
+    z-index: 3;
+    width: 70px;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+// ---------------------------------------------
+  .hamburger-lines {
+    // z-index: 3;
+  }
+
+  button {
+    color: $header-color;
+
+    .burger_class {
+      font-size: 29px;
+    }
+  }
+
+  // .navbar {
+  //   width: 100%;
+  //   @include d-flex(space-between, center);
+
+  //   background-color: aquamarine;
+  // }
+  
+  .nav_menu {
+    position: fixed;
+    top: calc(90px + 50px);
+    bottom: 0;
+    left: -260px;
+    // width: 100%;
+    width: 260px;
+    padding-top: 5rem;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.9);
+    overflow-y: auto;
+    transition: 0.4s;
+
+    &.show {
+      left: 0;
+    }
+
+    & > li {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      overflow: hidden;
+      margin: 0.5rem 1rem;
+      position: relative;
+      font-weight: 400;
+      // background-color: red;
+      
+      a {
+        width: 100%;
+        height: 100%;
+        padding: 1rem 0.5rem;
+        padding-right: 5px;
+        display: block;;
+        @include d-flex(space-between, center);
+        @extend %btn-clicked;
+        // background-color: rgba(64, 224, 208, 0.082);
+        background-color: #f7641b11;
+      }
+
+      span {
+        // transform: translateX(-20px);
+      }
+    }
+  }
+}
+
+@include media(480px) {
+  .header-scrolled {
+    top: 40px;
+    padding: 0 4%;
+  
+    .logo {
+      z-index: 3;
+      width: 80px;
+    }
+
+    button .burger_class {
+      font-size: 35px;
+    }
+
+    .nav_menu {
+      top: calc(90px + 40px);
+    }
+  }
+}
+
+@include media(768px) {
+  .header-scrolled {
+    padding: 0 8%;
+
+    &::after {
+      width: 85%;
+    }
+
+    .logo {
+      z-index: 3;
+      width: 90px;
+    }
+
+    button .burger_class {
+      font-size: 39px;
+    }
+  }
+}
+
+@include media(992px) {
+  .header-scrolled {
+    padding: 0 0%;
+    @include d-flex(space-around, center);
+    // background-color: turquoise;
+
+    &::after {
+      width: 90%;
+      margin-right: 3%;
+    }
+
+    .hamburger-lines {
+      display: none;
+    }
+
+    .logo {
+      z-index: 3;
+      width: 100px;
+      margin-left: 5%;
+      // background-color: #39353e;
+    }
+
+    .navbar {
+      width: 70%;
+      @include d-flex(flex-end, center);
+      // background-color: aquamarine;
+    }
+
+    .nav_menu {
+      position: static;
+      width: 100%;
+      max-width: 500px;
+      padding-top: 0;
+      background-color: transparent;
+      @include d-flex(flex-end, center);
+      flex-direction: row;
+      // background-color: #39353e;
+
+      & > li {
+        // flex: 1;
+        min-width: 80px;
+        margin: 4px;
+        padding: 0;
+        white-space: nowrap;
+        // background-color: antiquewhite;
+        
+        a {
+          width: auto;
+          font-size: 14px;
+          padding: 4px 8px;
+          background-color: transparent;
+          display: block;
+          text-align: center;
+
+          &:hover {
+            background-color: transparent;
+            color: $secondary-color;
+          }
+        }
+  
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+@include media(1200px) {
+  .header-scrolled {
+    // padding: 0 0%;
+
+    &::after {
+      width: 85%;
+      margin-left: 10%;
+    }
+
+    .logo {
+      // margin-left: 5%;
+    }
+
+    .navbar {
+      width: 60%;
+    }
+
+    .nav_menu {
+      max-width: 600px;
+
+      & > li {
+        flex: 1;
+        
+        // a {
+        //   font-size: 16px;
+        // }
+      }
+    }
+  }
+}
