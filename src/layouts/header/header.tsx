@@ -61,7 +61,7 @@ const preventScrolling = () => {
   }
 
   const changeNavbarColor = () =>{
-     if(window.scrollY >= 100){
+     if(window.scrollY >= 40){
        setColorchange(true);
      }
      else{
