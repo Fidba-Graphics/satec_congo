@@ -85,8 +85,7 @@
   } 
 }
 
-
-@include media(1200px) {
+@include media(992px) {
   .contact_info {
     p {
       font-size: 10.5px;
@@ -96,6 +95,20 @@
     li svg {
       padding: 3.5px;
       font-size: 18px;
+    }
+  } 
+}
+
+@include media(1200px) {
+  .contact_info {
+    p {
+      font-size: 11px;
+    }
+  }
+  .social_media_wrapper {
+    li svg {
+      padding: 3px;
+      font-size: 20px;
     }
   } 
 }
