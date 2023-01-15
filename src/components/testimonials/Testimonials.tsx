@@ -13,7 +13,7 @@ import styles from './testimonial.module.scss';
 export const Testimonials: React.FC<{}> = () => {
   return (
     <motion.section className={styles.testimonials_section} id="team">
-      <div className={styles.estimonials_wrapper}>
+      <div className={styles.testimonials_wrapper}>
         {/* <Fade bottom> */}
           <div className={styles.testimonials_header}>
             <h3 className={styles.testimonials_sub_title}>Lire les Témoignages</h3>
@@ -26,7 +26,7 @@ export const Testimonials: React.FC<{}> = () => {
     
         {/* <Fade bottom> */}
           <motion.div
-          className={styles.testimonials_wrapper}
+          className={styles.testimonials_wrappers}
           variants={fadeLeft}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
