@@ -15,8 +15,8 @@ export const Intro: React.FC<{}> = () => {
         <div className={styles.container} data-aos="fade-up" data-aos-delay="400">
           {/* <Fade bottom> */}
             <h1 className={styles.intro_title}>
-              Etês vous passionné <br />
-              de la technologie ?
+              Etês vous passionné de la
+              technologie ?
             </h1>
           {/* </Fade> */}
           {/* <Fade bottom> */}
