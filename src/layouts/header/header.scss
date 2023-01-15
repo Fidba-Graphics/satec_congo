@@ -178,7 +178,7 @@
     .nav_menu {
       position: static;
       width: 100%;
-      max-width: 500px;
+      max-width: 550px;
       padding-top: 0;
       background-color: transparent;
       @include d-flex(flex-end, center);
@@ -186,8 +186,8 @@
 
       & > li {
         // flex: 1;
-        min-width: 60px;
-        margin: 2px;
+        min-width: 70px;
+        margin: 4px;
         padding: 0;
         white-space: nowrap;
         
