@@ -21,7 +21,8 @@ export const Intro: React.FC<{}> = () => {
           {/* </Fade> */}
           {/* <Fade bottom> */}
             <p className={styles.intro_subtitle}>
-              La solution c'est nous! SATEC - Congo sarl.
+              Besoin d'une solution pour votre entreprise ou projet? Ne cherchez pas plus loin que SATEC - Congo sarl. "La solution c'est nous !"
+              {/* La solution c'est nous! SATEC - Congo sarl. */}
             </p>
           {/* </Fade> */}
           {/* <Fade bottom> */}

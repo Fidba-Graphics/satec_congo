@@ -29,32 +29,33 @@
   .intro_title {
     flex: 1;
     color: #fff;
-    font-size: 2rem; //36
-    line-height: 3rem;
+    font-size: 24px; //36
+    line-height: 34px;
     font-weight: 700;
     margin-bottom: 1.65rem;
     text-transform: uppercase;
   }
 
   .intro_subtitle {
-    font-size: 1.25rem; //16
+    font-size: 14px; //16
+    line-height: 21px;
     font-weight: 300; //400
-    line-height: 1.625rem;
     margin-bottom: 2rem;
+    color: #888888
   }
 
   .intro_btn {
     @include d-flex(center, center);
-    font-size: 1rem;
-    font-weight: 400;
-    padding: 0.8rem;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0.8rem 0.4rem;
     border-radius: 0.3rem;
     @extend %btn-hovered;
     transition: all 0.4s ease-in-out;
 
     svg {
-      font-size: 1.2rem;
-      margin-left: 0.4rem;
+      font-size: 1.8rem;
+      margin-left: 0.2rem;
       transition: all 0.3s ease-in-out;
     }
 
@@ -85,9 +86,30 @@
       padding: 0 5%;
     }
 
-    .intro_subtitle {
-      white-space: nowrap;
+    .intro_title {
+      flex: 1;
+      font-size: 28px;
+      line-height: 38px;
     }
+  
+    .intro_subtitle {
+      font-size: 15px;
+      line-height: 22px;
+    }
+  
+    .intro_btn {
+      @include d-flex(center, center);
+      font-size: 14px;
+    
+      svg {
+        font-size: 1.8rem;
+        margin-left: 0.4rem;
+      }
+    }
+
+    // .intro_subtitle {
+    //   white-space: nowrap;
+    // }
   }
 }
 
@@ -98,22 +120,22 @@
     }
 
     .intro_title {
-      // font-size: 3.5rem;
-      // line-height: 4.5rem;
-      margin-bottom: 1rem;
+      flex: 1;
+      font-size: 30px;
+      line-height: 40px;
     }
-
+  
     .intro_subtitle {
-      // font-size: 2.2rem;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 1rem;
       font-weight: 400;
       margin-bottom: 2rem;
     }
-
+  
     .intro_btn {
-      // font-size: 2rem;
-      font-weight: 600;
-      // padding: 1.2rem 2rem;
-      // border-radius: 0.5rem;
+      @include d-flex(center, center);
+      font-size: 15px;
   
       svg {
         font-size: 23px;
@@ -134,7 +156,63 @@
 @include media(992px) {
   .intro_section {
     .container {
-      max-width: 680px;
+      max-width: 700px;
+    }
+
+    .intro_title {
+      flex: 1;
+      font-size: 36px;
+      line-height: 48px;
+    }
+  
+    .intro_subtitle {
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 1rem;
+      font-weight: 400;
+      margin-bottom: 2.2rem;
+    }
+
+    .intro_btn {
+      @include d-flex(center, center);
+      font-size: 17px;
+      font-weight: 600;
+  
+      svg {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@include media(1200px) {
+  .intro_section {
+    .container {
+      max-width: 740px;
+    }
+
+    .intro_title {
+      flex: 1;
+      font-size: 40px;
+      line-height: 52px;
+    }
+  
+    .intro_subtitle {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 1rem;
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+    }
+
+    .intro_btn {
+      @include d-flex(center, center);
+      font-size: 18px;
+      font-weight: 600;
+  
+      svg {
+        font-size: 25px;
+      }
     }
   }
 }
