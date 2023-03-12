@@ -75,7 +75,7 @@ const preventScrolling = () => {
       <> 
         {children}
       </>
-      <motion.div className={`header-scrolled  ${colorChange && 'colorChange'} d-flex flex-center`}>
+      <motion.div className={`header-scrolled  ${(colorChange || burgerClicked) && 'colorChange'} d-flex flex-center`}>
         <motion.div className="logo">
           <a href="#home">
             <img src={logo} alt="logo" />
