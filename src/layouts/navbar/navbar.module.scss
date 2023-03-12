@@ -37,8 +37,7 @@
   gap: 1.5rem;
 
   li svg {
-    background: rgba(255, 255, 255, 0.1);
-    color: $secondary-color;
+    background: rgba(255, 255, 255, 0.199);
     color: $header-color;
     padding: 2px;
     font-size: 16px;
@@ -102,8 +101,8 @@
   // }
   // .social_media_wrapper {
   //   li svg {
-  //     padding: 3.5px;
-  //     font-size: 18px;
+  //     padding: 4px;
+  //     font-size: 20px;
   //   }
   // }
 }
@@ -116,7 +115,7 @@
   }
   .social_media_wrapper {
     li svg {
-      // padding: 3.5px;
+      padding: 3.7px;
       font-size: 22px;
     }
   } 

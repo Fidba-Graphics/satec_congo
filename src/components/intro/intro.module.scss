@@ -19,18 +19,18 @@
     background-color: rgba(4,9,30,0.8);
     @include d-flex(flex-start, center);
     position: relative;
+    padding: 0 1rem;
   }
 
   .container {
     max-width: 380px;
-    padding: 0 1rem;
   }
   
   .intro_title {
-    flex: 1;
-    color: #fff;
-    font-size: 24px; //36
-    line-height: 34px;
+    // flex: 1;
+    color: $header-color;
+    font-size: 28px;
+    line-height: 36px;
     font-weight: 700;
     margin-bottom: 1.65rem;
     text-transform: uppercase;
@@ -41,14 +41,14 @@
     line-height: 21px;
     font-weight: 300; //400
     margin-bottom: 2rem;
-    color: #888888
+    color: $text-color
   }
 
   .intro_btn {
     @include d-flex(center, center);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
-    padding: 0.8rem 0.4rem;
+    padding: 0.5rem 0.6rem;
     border-radius: 0.3rem;
     @extend %btn-hovered;
     transition: all 0.4s ease-in-out;
@@ -81,20 +81,22 @@
 @include media(480px) {
 
   .intro_section {
-    .container {
-      max-width: 480px;
+    .overlay_bg {
       padding: 0 5%;
     }
 
+    .container {
+      max-width: 540px;
+    }
+
     .intro_title {
-      flex: 1;
-      font-size: 28px;
-      line-height: 38px;
+      font-size: 36px;
+      line-height: 48px;
     }
   
     .intro_subtitle {
-      font-size: 15px;
-      line-height: 22px;
+      font-size: 16px;
+      line-height: 24px;
     }
   
     .intro_btn {
@@ -103,7 +105,7 @@
     
       svg {
         font-size: 1.8rem;
-        margin-left: 0.4rem;
+        margin-left: 10px;
       }
     }
 
@@ -116,18 +118,18 @@
 @include media(768px) {
   .intro_section {
     .container {
-      max-width: 580px;
+      // max-width: 400px;
     }
 
     .intro_title {
       flex: 1;
-      font-size: 30px;
-      line-height: 40px;
+      // font-size: 30px;
+      // line-height: 40px;
+      font-size: 36px;
+      line-height: 48px;
     }
   
     .intro_subtitle {
-      font-size: 16px;
-      line-height: 24px;
       margin-bottom: 1rem;
       font-weight: 400;
       margin-bottom: 2rem;
@@ -135,7 +137,7 @@
   
     .intro_btn {
       @include d-flex(center, center);
-      font-size: 15px;
+      // font-size: 15px;
   
       svg {
         font-size: 23px;
@@ -155,19 +157,23 @@
 
 @include media(992px) {
   .intro_section {
+    .overlay_bg {
+      padding: 0 7%;
+    }
+
     .container {
-      max-width: 700px;
+      max-width: 600px;
     }
 
     .intro_title {
       flex: 1;
-      font-size: 36px;
-      line-height: 48px;
+      font-size: 52px;
+      line-height: 58px;
     }
   
     .intro_subtitle {
       font-size: 18px;
-      line-height: 26px;
+      line-height: 28px;
       margin-bottom: 1rem;
       font-weight: 400;
       margin-bottom: 2.2rem;
@@ -175,7 +181,7 @@
 
     .intro_btn {
       @include d-flex(center, center);
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 600;
   
       svg {
@@ -188,18 +194,19 @@
 @include media(1200px) {
   .intro_section {
     .container {
-      max-width: 740px;
+      // max-width: 1100px;
+
     }
 
     .intro_title {
       flex: 1;
-      font-size: 40px;
-      line-height: 52px;
+      font-size: 54px;
+      line-height: 60px;
     }
   
     .intro_subtitle {
       font-size: 20px;
-      line-height: 28px;
+      line-height: 32px;
       margin-bottom: 1rem;
       font-weight: 400;
       margin-bottom: 2.5rem;
