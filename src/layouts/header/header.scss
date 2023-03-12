@@ -76,7 +76,7 @@
     width: 260px;
     padding-top: 5rem;
     z-index: 2;
-    background-color: rgba(0,0,0,0.9);
+    background-color: $darkbleu-bgcolor;
     overflow-y: auto;
     transition: 0.4s;
 
@@ -125,7 +125,7 @@
 
   
     .logo {
-      width: 90px;
+      width: 100px;
     }
 
     .hamburger-lines button .burger_class {
@@ -137,6 +137,7 @@
 
       & > li {
         font-size: 13px;
+        margin: 0.8rem 1rem;
       }
     }
   }
@@ -146,7 +147,7 @@
   .header-scrolled {
 
     .logo {
-      width: 100px;
+      width: 120px;
     }
 
     .hamburger-lines button .burger_class {
@@ -156,6 +157,7 @@
     .nav_menu {
       & > li {
         font-size: 14px;
+        margin: 1rem;
       }
     }
   }
@@ -174,6 +176,7 @@
     .navbar {
       width: 70%;
       @include d-flex(flex-end, center);
+      // background-color: red;
     }
 
     .logo {
@@ -182,8 +185,8 @@
 
     .nav_menu {
       position: static;
-      width: 100%;
-      max-width: 550px;
+      width: 90%;
+      max-width: 780px;
       padding-top: 0;
       background-color: transparent;
       @include d-flex(flex-end, center);
@@ -191,10 +194,12 @@
 
       & > li {
         // flex: 1;
-        min-width: 70px;
-        margin: 4px;
+        min-width: 90px;
+        margin: 6px;
         padding: 0;
         white-space: nowrap;
+        text-transform: capitalize;
+        font-size: 16px;
         
         a {
           width: auto;
@@ -211,6 +216,24 @@
   
         span {
           display: none;
+        }
+
+        // &.active {
+        //   a {
+        //     background-color: $secondary-color;
+        //     color: $darkbleu-bgcolor;
+        //   }
+        // }
+        &:last-child {
+          margin-left: 5%;
+          border: 1px solid  $secondary-color;
+          background-color: $secondary-color;
+          border-radius: 4px;
+
+          &:hover {
+            background-color: transparent;
+            color: $secondary-color;
+          }
         }
       }
     }
@@ -235,7 +258,8 @@
 
     .nav_menu {
       & > li {
-        font-size: 15px;
+        font-size: 18px;
+        margin: 6px 8px;
       }
     }
   }

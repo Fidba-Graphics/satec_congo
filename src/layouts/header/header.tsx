@@ -23,15 +23,15 @@ export const Header: React.FC<Props> = ({ children }) => {
       linkTo: 'about'
     },
     {
-      name: 'Our Services',
+      name: 'Services',
       linkTo: 'services'
     },
     {
-      name: 'Produits',
+      name: 'Nos Produits',
       linkTo: 'products'
     },
     {
-      name: 'Team',
+      name: 'Notre Equipe',
       linkTo: 'team'
     },
     {
@@ -61,7 +61,7 @@ const preventScrolling = () => {
   }
 
   const changeNavbarColor = () =>{
-     if(window.scrollY >= 40){
+     if(window.scrollY >= 80){
        setColorchange(true);
      }
      else{
