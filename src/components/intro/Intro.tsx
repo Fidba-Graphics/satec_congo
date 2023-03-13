@@ -21,13 +21,17 @@ export const Intro: React.FC<{}> = () => {
           {/* </Fade> */}
           {/* <Fade bottom> */}
             <p className={styles.intro_subtitle}>
-              La solution c'est nous! SATEC - Congo sarl.
+              Si vous avez besoin d'une solution pour votre entreprise ou projet. <br/>
+              Ne cherchez pas plus loin que SATEC - Congo sarl. <br />
+              "La solution c'est nous !"
+              {/* La solution c'est nous! SATEC - Congo sarl. */}
             </p>
           {/* </Fade> */}
           {/* <Fade bottom> */}
           <a href="#services">
             <button className={styles.intro_btn} type="submit" aria-label="services">
-              Nos Services <BsArrowRightShort/>
+              Nos Services
+              {/* <BsArrowRightShort/> */}
             </button>
             </a>
           {/* </Fade> */}
